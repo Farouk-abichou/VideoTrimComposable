@@ -11,14 +11,15 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun VideoTimeline(
     images: List<Int>,
-    numberOfImages : Int
+    numberOfImages : Int,
+    width : Dp
 ){
-    val width =300.dp
 
     Card (
         modifier = Modifier

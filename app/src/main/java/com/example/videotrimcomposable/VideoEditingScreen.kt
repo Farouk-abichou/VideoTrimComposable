@@ -18,14 +18,15 @@ fun VideoEditingScreen() {
              Text(text = "VideoEditingScreen")
         }
     ) { paddingValues ->
-        Box(
+        BoxWithConstraints (
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ) {
             Video(paddingValues)
             VideoTimeline(
                 images = images,
-                numberOfImages = images.size
+                numberOfImages = images.size,
+                width = maxWidth
             )
         }
     }
