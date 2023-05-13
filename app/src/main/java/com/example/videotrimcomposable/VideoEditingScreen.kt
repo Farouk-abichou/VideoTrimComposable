@@ -6,6 +6,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.videotrimcomposable.VideoTrimmer.VideoTimeline
@@ -31,7 +32,10 @@ fun VideoEditingScreen() {
             contentAlignment = Alignment.Center
         ) {
             Video(paddingValues)
-            VideoTimeline()
+            VideoTimeline(
+                images = images,
+                numberOfImages = images.size
+            )
         }
     }
 }
@@ -42,3 +46,13 @@ fun DefaultPreview() {
     VideoEditingScreen()
 }
 
+val images: List<Int> = listOf(
+    R.drawable.background,
+    R.drawable.background,
+    R.drawable.background,
+    R.drawable.background,
+    R.drawable.background,
+    R.drawable.background,
+    R.drawable.background,
+    R.drawable.background,
+)
