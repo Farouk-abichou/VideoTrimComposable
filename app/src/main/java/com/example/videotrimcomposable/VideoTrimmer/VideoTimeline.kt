@@ -35,7 +35,7 @@ fun VideoTimeline(
                 Image(
                     painterResource(images[item]),
                     contentDescription = item.toString(),
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillWidth,
                     modifier = Modifier
                         .height(60.dp)
                         .width(width/numberOfImages)

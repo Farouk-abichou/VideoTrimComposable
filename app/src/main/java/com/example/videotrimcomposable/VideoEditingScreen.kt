@@ -15,16 +15,7 @@ import com.example.videotrimcomposable.VideoTrimmer.VideoTimeline
 fun VideoEditingScreen() {
     Scaffold(
         topBar = {
-            Row (
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(40.dp)
-                ,
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ){
-                Text(text = "VideoEditingScreen")
-            }
+             Text(text = "VideoEditingScreen")
         }
     ) { paddingValues ->
         Box(
@@ -40,14 +31,7 @@ fun VideoEditingScreen() {
     }
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    VideoEditingScreen()
-}
-
 val images: List<Int> = listOf(
-    R.drawable.background,
     R.drawable.background,
     R.drawable.background,
     R.drawable.background,
