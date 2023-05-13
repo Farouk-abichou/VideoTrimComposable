@@ -1,6 +1,5 @@
 package com.example.videotrimcomposable
 
-import android.provider.MediaStore.Video
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
