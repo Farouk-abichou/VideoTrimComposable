@@ -1,15 +1,14 @@
 package com.example.videotrimcomposable
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.material.*
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.example.videotrimcomposable.VideoTrimmer.VideoTimeline
 
+@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun VideoEditingScreen() {
 
@@ -29,6 +28,25 @@ fun VideoEditingScreen() {
                 images = images,
                 numberOfImages = images.size,
                 width = maxWidth-40.dp
+            )
+
+            var sliderValues by remember {
+                mutableStateOf(1f..20f) // pass the initial values
+            }
+
+            RangeSlider(
+                values = sliderValues,
+                onValueChange = { sliderValues_ ->
+                    sliderValues = sliderValues_
+                },
+                valueRange = 1f..20f,
+                onValueChangeFinished = {
+                    // this is called when the user completed selecting the value
+                    Log.d(
+                        "MainActivity",
+                        "First: ${sliderValues.start}, Last: ${sliderValues.endInclusive}"
+                    )
+                }
             )
 
         }

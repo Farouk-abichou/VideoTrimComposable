@@ -1,4 +1,4 @@
-package com.example.videotrimcomposable.VideoTrimmer
+package com.example.videotrimcomposable
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
