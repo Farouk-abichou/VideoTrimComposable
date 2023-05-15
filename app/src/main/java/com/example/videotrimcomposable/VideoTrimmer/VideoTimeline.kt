@@ -22,14 +22,14 @@ fun VideoTimeline(
 ){
 
     Card (
-        modifier = Modifier
-            .width(width)
-            .height(60.dp),
-        shape = RoundedCornerShape(30),
-        border = BorderStroke(
-            2.dp,
-            color = Color.LightGray
-        )
+//        modifier = Modifier
+//            .width(width)
+//            .height(60.dp),
+//        shape = RoundedCornerShape(30),
+//        border = BorderStroke(
+//            2.dp,
+//            color = Color.LightGray
+//        )
     ){
         LazyRow {
             items(count = numberOfImages){item ->
