@@ -12,8 +12,6 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun VideoEditingScreen() {
 
-
-
     Scaffold(
         topBar = {
              Text(text = "VideoEditingScreen")
